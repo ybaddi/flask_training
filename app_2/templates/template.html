@@ -1,0 +1,17 @@
+<html>
+    <body>
+
+        <form method="post">
+            <input type="text" name="publication" placeholder="search"/>
+            <input type="submit" value="submit"/>
+        </form>
+
+
+        <h1> {{publication}} Headlines </h1>
+        {% for article in articles %}
+        <b> <a href="{{article.link}}" target="_blank">{{article.title}}</a></b> <br/>
+        <i>{{article.published}}</i> <br/>
+        <p>{{article.summary}}</p> <br/>
+    {% endfor %}
+    </body>
+</html>
